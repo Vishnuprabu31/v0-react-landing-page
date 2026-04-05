@@ -1,8 +1,32 @@
+"use client"
+
+import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Phone, MapPin, Globe, Clock } from "lucide-react"
+import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
+import { 
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
+import { Phone, MapPin, Globe, Clock, Send, CheckCircle } from "lucide-react"
 
 export function ContactSection() {
+  const [isSubmitted, setIsSubmitted] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+    // Simulate form submission
+    await new Promise(resolve => setTimeout(resolve, 1000))
+    setIsSubmitting(false)
+    setIsSubmitted(true)
+  }
+
   return (
     <section id="contact" className="py-20 bg-card">
       <div className="container mx-auto px-4">
@@ -20,6 +44,160 @@ export function ContactSection() {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12">
+            {/* Enquiry Form */}
+            <div>
+              <Card className="bg-background border-border shadow-lg">
+                <CardContent className="p-6 md:p-8">
+                  <h3 className="text-xl font-bold text-foreground mb-6">Send Us an Enquiry</h3>
+                  
+                  {isSubmitted ? (
+                    <div className="text-center py-12">
+                      <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <CheckCircle className="w-8 h-8 text-green-600" />
+                      </div>
+                      <h4 className="text-xl font-semibold text-foreground mb-2">Thank You!</h4>
+                      <p className="text-muted-foreground mb-6">
+                        Your enquiry has been submitted successfully. Our team will contact you shortly.
+                      </p>
+                      <Button 
+                        variant="outline" 
+                        onClick={() => setIsSubmitted(false)}
+                        className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                      >
+                        Submit Another Enquiry
+                      </Button>
+                    </div>
+                  ) : (
+                    <form onSubmit={handleSubmit} className="space-y-5">
+                      <div className="grid sm:grid-cols-2 gap-4">
+                        <div className="space-y-2">
+                          <label htmlFor="name" className="text-sm font-medium text-foreground">
+                            Full Name <span className="text-primary">*</span>
+                          </label>
+                          <Input
+                            id="name"
+                            name="name"
+                            placeholder="Enter your name"
+                            required
+                            className="bg-card border-border focus:border-primary focus:ring-primary"
+                          />
+                        </div>
+                        <div className="space-y-2">
+                          <label htmlFor="phone" className="text-sm font-medium text-foreground">
+                            Phone Number <span className="text-primary">*</span>
+                          </label>
+                          <Input
+                            id="phone"
+                            name="phone"
+                            type="tel"
+                            placeholder="Enter phone number"
+                            required
+                            className="bg-card border-border focus:border-primary focus:ring-primary"
+                          />
+                        </div>
+                      </div>
+
+                      <div className="space-y-2">
+                        <label htmlFor="email" className="text-sm font-medium text-foreground">
+                          Email Address <span className="text-primary">*</span>
+                        </label>
+                        <Input
+                          id="email"
+                          name="email"
+                          type="email"
+                          placeholder="Enter your email"
+                          required
+                          className="bg-card border-border focus:border-primary focus:ring-primary"
+                        />
+                      </div>
+
+                      <div className="grid sm:grid-cols-2 gap-4">
+                        <div className="space-y-2">
+                          <label htmlFor="course" className="text-sm font-medium text-foreground">
+                            Course Interested In <span className="text-primary">*</span>
+                          </label>
+                          <Select name="course" required>
+                            <SelectTrigger className="bg-card border-border focus:border-primary focus:ring-primary">
+                              <SelectValue placeholder="Select a course" />
+                            </SelectTrigger>
+                            <SelectContent>
+                              <SelectItem value="political-science">Political Science & IR</SelectItem>
+                              <SelectItem value="sociology">Sociology</SelectItem>
+                              <SelectItem value="general-studies">General Studies</SelectItem>
+                              <SelectItem value="ethics">Ethics, Integrity & Aptitude</SelectItem>
+                              <SelectItem value="current-affairs">Current Affairs</SelectItem>
+                              <SelectItem value="complete-package">Complete IAS Package</SelectItem>
+                            </SelectContent>
+                          </Select>
+                        </div>
+                        <div className="space-y-2">
+                          <label htmlFor="attempts" className="text-sm font-medium text-foreground">
+                            UPSC Attempt
+                          </label>
+                          <Select name="attempts">
+                            <SelectTrigger className="bg-card border-border focus:border-primary focus:ring-primary">
+                              <SelectValue placeholder="Select attempt" />
+                            </SelectTrigger>
+                            <SelectContent>
+                              <SelectItem value="fresh">Fresh / 1st Attempt</SelectItem>
+                              <SelectItem value="2nd">2nd Attempt</SelectItem>
+                              <SelectItem value="3rd">3rd Attempt</SelectItem>
+                              <SelectItem value="4th-plus">4th+ Attempt</SelectItem>
+                            </SelectContent>
+                          </Select>
+                        </div>
+                      </div>
+
+                      <div className="space-y-2">
+                        <label htmlFor="education" className="text-sm font-medium text-foreground">
+                          Educational Qualification
+                        </label>
+                        <Input
+                          id="education"
+                          name="education"
+                          placeholder="e.g., B.Tech, BA, B.Sc, etc."
+                          className="bg-card border-border focus:border-primary focus:ring-primary"
+                        />
+                      </div>
+
+                      <div className="space-y-2">
+                        <label htmlFor="message" className="text-sm font-medium text-foreground">
+                          Your Message / Query
+                        </label>
+                        <Textarea
+                          id="message"
+                          name="message"
+                          placeholder="Tell us about your preparation journey or any specific queries..."
+                          rows={4}
+                          className="bg-card border-border focus:border-primary focus:ring-primary resize-none"
+                        />
+                      </div>
+
+                      <Button 
+                        type="submit" 
+                        size="lg"
+                        disabled={isSubmitting}
+                        className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
+                      >
+                        {isSubmitting ? (
+                          <>Processing...</>
+                        ) : (
+                          <>
+                            <Send className="mr-2 h-5 w-5" />
+                            Submit Enquiry
+                          </>
+                        )}
+                      </Button>
+
+                      <p className="text-xs text-muted-foreground text-center">
+                        By submitting this form, you agree to be contacted by our team regarding your enquiry.
+                      </p>
+                    </form>
+                  )}
+                </CardContent>
+              </Card>
+            </div>
+
             {/* Contact Info */}
             <div className="space-y-6">
               <Card className="bg-background border-border">
@@ -30,8 +208,8 @@ export function ContactSection() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-foreground mb-2">Phone Numbers</h3>
-                      <p className="text-foreground/80 text-lg">9884 554 654</p>
-                      <p className="text-foreground/80 text-lg">9962 527 528</p>
+                      <a href="tel:9884554654" className="text-foreground/80 text-lg block hover:text-primary transition-colors">9884 554 654</a>
+                      <a href="tel:9962527528" className="text-foreground/80 text-lg block hover:text-primary transition-colors">9962 527 528</a>
                     </div>
                   </div>
                 </CardContent>
@@ -94,51 +272,23 @@ export function ContactSection() {
                   </div>
                 </CardContent>
               </Card>
-            </div>
 
-            {/* CTA Card */}
-            <div className="flex items-center">
-              <div className="bg-primary text-primary-foreground p-8 md:p-12 rounded-2xl w-full">
-                <h3 className="text-2xl md:text-3xl font-bold mb-6 text-balance">
-                  Ready to Start Your IAS Journey?
-                </h3>
-                <p className="text-primary-foreground/90 mb-8 text-lg leading-relaxed">
-                  Join the legacy of 533+ successful officers. With 21 years of ethical coaching 
-                  and proven results, we&apos;re committed to helping you achieve your dream of 
-                  becoming a Civil Servant.
+              {/* Quick Call CTA */}
+              <div className="bg-primary text-primary-foreground p-6 rounded-xl">
+                <h4 className="font-semibold mb-2">Prefer to Talk?</h4>
+                <p className="text-primary-foreground/80 text-sm mb-4">
+                  Call us directly to speak with our counselors about your IAS preparation journey.
                 </p>
-                <div className="space-y-4">
-                  <Button 
-                    size="lg" 
-                    className="w-full bg-white text-primary hover:bg-white/90 text-lg py-6"
-                  >
+                <Button 
+                  size="lg" 
+                  className="w-full bg-white text-primary hover:bg-white/90"
+                  asChild
+                >
+                  <a href="tel:9884554654">
                     <Phone className="mr-2 h-5 w-5" />
                     Call Now: 9884 554 654
-                  </Button>
-                  <p className="text-center text-primary-foreground/70 text-sm">
-                    Feel the Pulse of UPSC
-                  </p>
-                </div>
-
-                {/* Badge */}
-                <div className="mt-8 pt-8 border-t border-primary-foreground/20">
-                  <div className="flex items-center justify-center gap-4">
-                    <div className="text-center">
-                      <p className="text-3xl font-bold">21</p>
-                      <p className="text-sm text-primary-foreground/80">Years</p>
-                    </div>
-                    <div className="h-12 w-px bg-primary-foreground/30" />
-                    <div className="text-center">
-                      <p className="text-3xl font-bold">533+</p>
-                      <p className="text-sm text-primary-foreground/80">Officers</p>
-                    </div>
-                    <div className="h-12 w-px bg-primary-foreground/30" />
-                    <div className="text-center">
-                      <p className="text-xs font-medium uppercase">Pledged to</p>
-                      <p className="text-lg font-bold">Ethics</p>
-                    </div>
-                  </div>
-                </div>
+                  </a>
+                </Button>
               </div>
             </div>
           </div>
