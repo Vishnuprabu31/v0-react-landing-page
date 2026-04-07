@@ -1,7 +1,12 @@
 self.__BUILD_MANIFEST = {
   "__rewrites": {
     "afterFiles": [],
-    "beforeFiles": [],
+    "beforeFiles": [
+      {
+        "source": "/v0-react-landing-page//_next/:path+",
+        "destination": "/v0-react-landing-page/_next/:path+"
+      }
+    ],
     "fallback": []
   },
   "sortedPages": [
