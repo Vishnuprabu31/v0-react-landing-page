@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Award, Users, BookOpen, Phone } from "lucide-react"
 import { useEffect, useRef } from "react"
+import Image from "next/image"
 
 export function HeroSection() {
   const videoRef = useRef<HTMLVideoElement>(null)
@@ -38,59 +39,88 @@ export function HeroSection() {
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          {/* Logo/Academy Name */}
-          <div className="mb-6 animate-fade-in">
-            <h2 className="text-lg md:text-xl font-medium text-secondary tracking-wider uppercase">
-              Raja Sir&apos;s
-            </h2>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight text-balance">
-              IAS Academy
-            </h1>
-            <p className="text-xl md:text-2xl text-secondary mt-3 italic">
-              Feel the Pulse of UPSC
-            </p>
-          </div>
+        <div className="max-w-6xl mx-auto">
+          {/* Header with Academy Image and Text */}
+          <div className="mb-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              {/* Left Side - Academy Info */}
+              <div>
+                {/* Logo/Academy Name */}
+                <div className="mb-8">
+                  <h2 className="text-lg md:text-xl font-medium text-secondary tracking-wider uppercase">
+                    Raja Sir&apos;s
+                  </h2>
+                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight text-balance">
+                    IAS Academy
+                  </h1>
+                  <p className="text-lg md:text-xl text-secondary mt-3 italic">
+                    Feel the Pulse of UPSC
+                  </p>
+                </div>
 
-          {/* Tagline */}
-          <p className="text-2xl md:text-4xl font-bold text-secondary mb-10 text-balance">
-            Tigritude Makes Everything Possible
-          </p>
+                {/* Tagline */}
+                <p className="text-xl md:text-2xl font-bold text-secondary mb-8 text-balance">
+                  Tigritude Makes Everything Possible
+                </p>
 
-          {/* Stats */}
-          <div className="flex flex-wrap justify-center gap-4 md:gap-8 mb-10">
-            <div className="flex items-center gap-3 bg-white/10 backdrop-blur-md px-6 py-4 rounded-xl border border-white/20">
-              <Award className="w-10 h-10 text-secondary" />
-              <div className="text-left">
-                <p className="text-3xl md:text-4xl font-bold text-white">21</p>
-                <p className="text-sm text-secondary/80">Years of Excellence</p>
+                {/* Stats */}
+                <div className="flex flex-wrap gap-4 md:gap-6 mb-8">
+                  <div className="flex items-center gap-3 bg-white/10 backdrop-blur-md px-4 py-3 rounded-lg border border-white/20">
+                    <Award className="w-8 h-8 text-secondary flex-shrink-0" />
+                    <div className="text-left">
+                      <p className="text-2xl md:text-3xl font-bold text-white">21</p>
+                      <p className="text-xs md:text-sm text-secondary/80">Years of Excellence</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3 bg-white/10 backdrop-blur-md px-4 py-3 rounded-lg border border-white/20">
+                    <Users className="w-8 h-8 text-secondary flex-shrink-0" />
+                    <div className="text-left">
+                      <p className="text-2xl md:text-3xl font-bold text-white">533+</p>
+                      <p className="text-xs md:text-sm text-secondary/80">Officers Produced</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* CTA Buttons */}
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 text-base md:text-lg px-6 md:px-8 py-5 md:py-6 shadow-lg shadow-primary/30">
+                    <BookOpen className="mr-2 h-5 w-5" />
+                    Explore Courses
+                  </Button>
+                  <Button size="lg" variant="outline" className="border-secondary text-secondary bg-transparent hover:bg-secondary hover:text-primary text-base md:text-lg px-6 md:px-8 py-5 md:py-6">
+                    <Phone className="mr-2 h-5 w-5" />
+                    Contact Us
+                  </Button>
+                </div>
+              </div>
+
+              {/* Right Side - Academy Image */}
+              <div className="relative h-80 lg:h-96 rounded-lg overflow-hidden shadow-2xl border-4 border-secondary">
+                <Image
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/VBOARD%202-DFGqoTgkfEDHT89rJONY0Vh4xGPgea.jpg"
+                  alt="Raja Sir's IAS Academy - Top Achievers and Faculty"
+                  fill
+                  className="object-cover"
+                  priority
+                />
               </div>
             </div>
-            <div className="flex items-center gap-3 bg-white/10 backdrop-blur-md px-6 py-4 rounded-xl border border-white/20">
-              <Users className="w-10 h-10 text-secondary" />
-              <div className="text-left">
-                <p className="text-3xl md:text-4xl font-bold text-white">533+</p>
-                <p className="text-sm text-secondary/80">Officers Produced</p>
-              </div>
+
+            {/* Achievement Badge */}
+            <div className="mt-12 bg-white/10 backdrop-blur-md border border-white/20 rounded-lg p-6 text-center">
+              <p className="text-2xl md:text-3xl font-bold text-primary mb-2">
+                AIR 1, AIR 89, AIR 53
+              </p>
+              <p className="text-lg md:text-xl text-secondary font-semibold text-balance">
+                Results that didn&apos;t happen by chance.
+              </p>
             </div>
           </div>
 
           {/* Quote */}
-          <blockquote className="text-xl md:text-2xl font-medium text-white/90 italic mb-10 text-balance">
+          <blockquote className="text-xl md:text-2xl font-medium text-white/90 italic text-center text-balance">
             &ldquo;We the People of India&rdquo;
           </blockquote>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-10 py-7 shadow-lg shadow-primary/30">
-              <BookOpen className="mr-2 h-5 w-5" />
-              Explore Courses
-            </Button>
-            <Button size="lg" variant="outline" className="border-secondary text-secondary bg-transparent hover:bg-secondary hover:text-primary text-lg px-10 py-7">
-              <Phone className="mr-2 h-5 w-5" />
-              Contact Us
-            </Button>
-          </div>
         </div>
       </div>
 

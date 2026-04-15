@@ -129,7 +129,7 @@ export function PricingSection() {
           {courses.map((course) => (
             <div
               key={course.code}
-              className="bg-card border-2 border-primary/20 rounded-lg p-6 hover:border-primary/50 hover:shadow-lg transition-all"
+              className="bg-card border-2 border-primary/20 rounded-lg p-6 hover:border-primary/50 hover:shadow-lg transition-all flex flex-col"
             >
               <div className="mb-4">
                 <span className="inline-block bg-primary text-primary-foreground px-4 py-2 rounded-full text-sm font-bold">
@@ -137,13 +137,13 @@ export function PricingSection() {
                 </span>
               </div>
               <h3 className="text-2xl font-bold text-primary mb-3">{course.title}</h3>
-              <p className="text-foreground/70 text-sm mb-6 line-clamp-3">
+              <p className="text-foreground/70 text-sm mb-6 line-clamp-3 flex-grow">
                 {course.description}
               </p>
               <div className="pt-4 border-t border-primary/20">
-                <p className="text-2xl font-bold text-primary">{course.price}</p>
+                <p className="text-2xl font-bold text-primary mb-4">{course.price}</p>
               </div>
-              <Button className="w-full mt-4 bg-primary text-primary-foreground hover:bg-primary/90">
+              <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90 mt-auto">
                 Enroll Now
               </Button>
             </div>

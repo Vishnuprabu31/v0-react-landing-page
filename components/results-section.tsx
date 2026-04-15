@@ -10,14 +10,14 @@ export function ResultsSection() {
       title: "IAS"
     },
     {
-      rank: "AIR 89",
-      name: "Sonali",
-      title: "IPS"
-    },
-    {
       rank: "AIR 53",
       name: "Kiran",
       title: "IAS"
+    },
+    {
+      rank: "AIR 89",
+      name: "Sonali",
+      title: "IPS"
     }
   ]
 

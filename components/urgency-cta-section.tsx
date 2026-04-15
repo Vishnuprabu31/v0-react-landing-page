@@ -27,7 +27,7 @@ export function UrgencyCTASection() {
             className="bg-secondary text-primary hover:bg-secondary/90 text-lg px-8 py-6 shadow-lg shadow-black/20 font-semibold"
           >
             <Phone className="mr-2 h-5 w-5" />
-            Book Your Counselling Call Now
+            Connect with our Academic Counsellor
           </Button>
           <a href="tel:9884554654" className="text-primary-foreground font-bold text-lg hover:underline">
             📞 9884 554 654
