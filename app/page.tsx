@@ -10,7 +10,6 @@ import { UrgencyCTASection } from "@/components/urgency-cta-section"
 import { ClosingSection } from "@/components/closing-section"
 import { AboutSection } from "@/components/about-section"
 import { SuccessStoriesSection } from "@/components/success-stories-section"
-import { FacultySection } from "@/components/faculty-section"
 import { PricingSection } from "@/components/pricing-section"
 import { CoursesSection } from "@/components/courses-section"
 import { ExamInfoSection } from "@/components/exam-info-section"
@@ -32,7 +31,6 @@ export default function Home() {
       <ClosingSection />
       <AboutSection />
       <SuccessStoriesSection />
-      <FacultySection />
       <PricingSection />
       <CoursesSection />
       <ExamInfoSection />

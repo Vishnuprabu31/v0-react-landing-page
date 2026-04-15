@@ -22,7 +22,7 @@ export function ProblemSection() {
           <p className="text-center text-lg md:text-xl font-semibold text-foreground mb-6">
             21+ Years of Mentorship | 533+ Officers Trained
           </p>
-          <p className="text-center text-secondary font-bold text-2xl md:text-3xl">
+          <p className="text-center text-primary font-bold text-2xl md:text-3xl">
             AIR 1, AIR 89, AIR 53 - Results that didn&apos;t happen by chance.
           </p>
         </div>
