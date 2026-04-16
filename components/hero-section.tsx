@@ -5,6 +5,13 @@ import { Award, Users, BookOpen, Phone } from "lucide-react"
 import Image from "next/image"
 
 export function HeroSection() {
+  const handleExploreClick = () => {
+    const coursesSection = document.getElementById('courses')
+    if (coursesSection) {
+      coursesSection.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
@@ -22,62 +29,36 @@ export function HeroSection() {
         <div className="absolute inset-0 bg-red-900/20 mix-blend-multiply" />
       </div>
       
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          {/* Logo/Academy Name */}
-          <div className="mb-8">
-            <h2 className="text-lg md:text-xl font-medium text-secondary tracking-wider uppercase">
-              Raja Sir&apos;s
-            </h2>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight text-balance">
-              IAS Academy
-            </h1>
-            <p className="text-xl md:text-2xl text-secondary mt-3 italic">
-              Feel the Pulse of UPSC
-            </p>
+      <div className="container mx-auto px-4 relative z-10 w-full">
+        {/* Stats positioned at left and right */}
+        <div className="absolute top-1/2 -translate-y-1/2 left-4 md:left-12">
+          <div className="bg-white/10 backdrop-blur-md px-4 md:px-6 py-4 md:py-6 rounded-xl border border-white/20 text-center">
+            <p className="text-3xl md:text-5xl font-bold text-white mb-1">21</p>
+            <p className="text-xs md:text-sm text-secondary/90 whitespace-nowrap">Years of Excellence</p>
           </div>
+        </div>
 
-          {/* Tagline */}
-          <p className="text-2xl md:text-4xl font-bold text-secondary mb-10 text-balance">
-            Tigritude Makes Everything Possible
-          </p>
-
-          {/* Stats */}
-          <div className="flex flex-wrap justify-center gap-4 md:gap-8 mb-10">
-            <div className="flex items-center gap-3 bg-white/10 backdrop-blur-md px-6 py-4 rounded-xl border border-white/20">
-              <Award className="w-10 h-10 text-secondary" />
-              <div className="text-left">
-                <p className="text-3xl md:text-4xl font-bold text-white">21</p>
-                <p className="text-sm text-secondary/80">Years of Excellence</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-3 bg-white/10 backdrop-blur-md px-6 py-4 rounded-xl border border-white/20">
-              <Users className="w-10 h-10 text-secondary" />
-              <div className="text-left">
-                <p className="text-3xl md:text-4xl font-bold text-white">533+</p>
-                <p className="text-sm text-secondary/80">Officers Produced</p>
-              </div>
-            </div>
+        <div className="absolute top-1/2 -translate-y-1/2 right-4 md:right-12">
+          <div className="bg-white/10 backdrop-blur-md px-4 md:px-6 py-4 md:py-6 rounded-xl border border-white/20 text-center">
+            <p className="text-3xl md:text-5xl font-bold text-white mb-1">533+</p>
+            <p className="text-xs md:text-sm text-secondary/90 whitespace-nowrap">Officers Produced</p>
           </div>
+        </div>
 
-          {/* Achievement Badge */}
-          <div className="mb-10 bg-white/10 backdrop-blur-md border border-white/20 rounded-lg p-6">
-            <p className="text-2xl md:text-3xl font-bold text-primary mb-2">
-              AIR 1, AIR 89, AIR 53
-            </p>
-            <p className="text-lg md:text-xl text-secondary font-semibold text-balance">
-              Results that didn&apos;t happen by chance.
-            </p>
-          </div>
-
+        {/* Center content */}
+        <div className="max-w-3xl mx-auto text-center flex flex-col items-center justify-center min-h-screen">
           {/* Quote */}
-          <blockquote className="text-xl md:text-2xl font-medium text-white/90 italic mb-10 text-balance">
-            &ldquo;We the People of India&rdquo;
+          <blockquote className="text-3xl md:text-5xl font-bold text-secondary mb-12 text-balance italic">
+            &ldquo;We understand UPSC better.&rdquo;
           </blockquote>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-10 py-7 shadow-lg shadow-primary/30">
+            <Button 
+              size="lg" 
+              onClick={handleExploreClick}
+              className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-10 py-7 shadow-lg shadow-primary/30"
+            >
               <BookOpen className="mr-2 h-5 w-5" />
               Explore Courses
             </Button>
