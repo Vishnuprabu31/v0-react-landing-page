@@ -29,28 +29,30 @@ export function HeroSection() {
       </div>
       
       <div className="container mx-auto px-4 relative z-10 w-full">
-        {/* Stats positioned at left and right - further apart */}
-        <div className="absolute top-1/2 -translate-y-1/2 left-0 pl-2 md:pl-8">
+        {/* Stats positioned at top left and top right */}
+        <div className="absolute top-8 md:top-12 left-0 pl-2 md:pl-8">
           <div className="bg-white/10 backdrop-blur-md px-4 md:px-6 py-4 md:py-6 rounded-xl border border-white/20 text-center">
             <p className="text-3xl md:text-5xl font-bold text-white mb-1">21</p>
             <p className="text-xs md:text-sm text-secondary/90 whitespace-nowrap">Years of Excellence</p>
           </div>
         </div>
 
-        <div className="absolute top-1/2 -translate-y-1/2 right-0 pr-2 md:pr-8">
+        <div className="absolute top-8 md:top-12 right-0 pr-2 md:pr-8">
           <div className="bg-white/10 backdrop-blur-md px-4 md:px-6 py-4 md:py-6 rounded-xl border border-white/20 text-center">
             <p className="text-3xl md:text-5xl font-bold text-white mb-1">533+</p>
             <p className="text-xs md:text-sm text-secondary/90 whitespace-nowrap">Officers Produced</p>
           </div>
         </div>
 
-        {/* Center content with quote at bottom */}
-        <div className="max-w-3xl mx-auto text-center flex flex-col items-center justify-between min-h-screen">
-          {/* Empty space for top alignment */}
-          <div className="flex-1"></div>
+        {/* Center content with quote and buttons */}
+        <div className="max-w-3xl mx-auto text-center flex flex-col items-center justify-center min-h-screen gap-8">
+          {/* Quote */}
+          <blockquote className="text-3xl md:text-5xl font-bold text-primary text-balance italic">
+            &ldquo;We understand UPSC better.&rdquo;
+          </blockquote>
 
-          {/* CTA Buttons centered */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-20">
+          {/* CTA Buttons below quote */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               size="lg" 
               onClick={handleExploreClick}
@@ -64,11 +66,6 @@ export function HeroSection() {
               Contact Us
             </Button>
           </div>
-
-          {/* Quote at bottom */}
-          <blockquote className="text-2xl md:text-4xl font-bold text-secondary text-balance italic pb-24">
-            &ldquo;We understand UPSC better.&rdquo;
-          </blockquote>
         </div>
       </div>
 
