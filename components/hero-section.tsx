@@ -29,42 +29,48 @@ export function HeroSection() {
       </div>
       
       <div className="container mx-auto px-4 relative z-10 w-full">
-        {/* Stats positioned at top left and top right */}
-        <div className="absolute top-8 md:top-12 left-0 pl-2 md:pl-8">
-          <div className="bg-white/10 backdrop-blur-md px-4 md:px-6 py-4 md:py-6 rounded-xl border border-white/20 text-center">
+        {/* Stats positioned at top left and top right - fully to edges */}
+        <div className="absolute top-8 md:top-12 left-0 -ml-2 md:-ml-4">
+          <div className="bg-white/10 backdrop-blur-md px-3 md:px-5 py-3 md:py-5 rounded-xl border border-white/20 text-center">
             <p className="text-3xl md:text-5xl font-bold text-white mb-1">21</p>
             <p className="text-xs md:text-sm text-secondary/90 whitespace-nowrap">Years of Excellence</p>
           </div>
         </div>
 
-        <div className="absolute top-8 md:top-12 right-0 pr-2 md:pr-8">
-          <div className="bg-white/10 backdrop-blur-md px-4 md:px-6 py-4 md:py-6 rounded-xl border border-white/20 text-center">
+        <div className="absolute top-8 md:top-12 right-0 -mr-2 md:-mr-4">
+          <div className="bg-white/10 backdrop-blur-md px-3 md:px-5 py-3 md:py-5 rounded-xl border border-white/20 text-center">
             <p className="text-3xl md:text-5xl font-bold text-white mb-1">533+</p>
             <p className="text-xs md:text-sm text-secondary/90 whitespace-nowrap">Officers Produced</p>
           </div>
         </div>
 
-        {/* Center content with quote and buttons */}
-        <div className="max-w-3xl mx-auto text-center flex flex-col items-center justify-center min-h-screen gap-8">
-          {/* Quote */}
-          <blockquote className="text-3xl md:text-5xl font-bold text-primary text-balance italic">
-            &ldquo;We understand UPSC better.&rdquo;
-          </blockquote>
+        {/* Center content with quote and buttons at bottom */}
+        <div className="max-w-3xl mx-auto text-center flex flex-col items-center justify-between min-h-screen">
+          {/* Empty space for centering */}
+          <div className="flex-1"></div>
 
-          {/* CTA Buttons below quote */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              size="lg" 
-              onClick={handleExploreClick}
-              className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-10 py-7 shadow-lg shadow-primary/30"
-            >
-              <BookOpen className="mr-2 h-5 w-5" />
-              Explore Courses
-            </Button>
-            <Button size="lg" variant="outline" className="border-secondary text-secondary bg-transparent hover:bg-secondary hover:text-primary text-lg px-10 py-7">
-              <Phone className="mr-2 h-5 w-5" />
-              Contact Us
-            </Button>
+          {/* Quote and buttons at bottom */}
+          <div className="flex flex-col items-center gap-8 pb-24">
+            {/* Quote */}
+            <blockquote className="text-3xl md:text-5xl font-bold text-primary text-balance italic">
+              &ldquo;We understand UPSC better.&rdquo;
+            </blockquote>
+
+            {/* CTA Buttons below quote */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button 
+                size="lg" 
+                onClick={handleExploreClick}
+                className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-10 py-7 shadow-lg shadow-primary/30"
+              >
+                <BookOpen className="mr-2 h-5 w-5" />
+                Explore Courses
+              </Button>
+              <Button size="lg" variant="outline" className="border-secondary text-secondary bg-transparent hover:bg-secondary hover:text-primary text-lg px-10 py-7">
+                <Phone className="mr-2 h-5 w-5" />
+                Contact Us
+              </Button>
+            </div>
           </div>
         </div>
       </div>
