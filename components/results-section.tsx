@@ -1,24 +1,17 @@
 "use client"
 
-import { Card, CardContent } from "@/components/ui/card"
-
 export function ResultsSection() {
-  const toppers = [
-    {
-      rank: "AIR 1",
-      name: "Anuj Agnihotri",
-      title: "IAS"
-    },
-    {
-      rank: "AIR 53",
-      name: "Kiran",
-      title: "IAS"
-    },
-    {
-      rank: "AIR 89",
-      name: "Sonali",
-      title: "IPS"
-    }
+  const videos = [
+    { id: "POYUXNa6ZAY", thumbnail: "/thumbnail1.jpg" },
+    { id: "9YISfaonrdw", thumbnail: "/thumbnail2.jpg" },
+    { id: "JNmD_hsLFkE", thumbnail: "/thumbnail3.jpg" },
+    { id: "kNyCGPLQMFA", thumbnail: "/thumbnail4.jpg" },
+    { id: "QDn7oyvHCiE", thumbnail: "/thumbnail5.jpg" },
+    { id: "PeWB0TlY7lo", thumbnail: "/thumbnail6.jpg" },
+    { id: "utuKqG79t5Y", thumbnail: "/thumbnail7.jpg" },
+    { id: "QSihJVV03z4", thumbnail: "/thumbnail8.jpg" },
+    { id: "BoDzyAL-RPg", thumbnail: "/thumbnail9.jpg" },
+    { id: "8AcMqH_2Jl0", thumbnail: "/thumbnail10.jpg" }
   ]
 
   return (
@@ -34,30 +27,38 @@ export function ResultsSection() {
           Consistency matters more than one-time results.
         </p>
 
-        {/* Toppers Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-          {toppers.map((topper, index) => (
-            <Card key={index} className="border-2 border-primary shadow-lg hover:shadow-xl transition-shadow">
-              <CardContent className="p-8 text-center">
-                <div className="mb-4">
-                  <div className="w-24 h-24 mx-auto rounded-full bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center text-white font-bold text-2xl mb-4">
-                    {topper.rank.split(" ")[1]}
+        {/* Horizontally Scrollable Video Gallery */}
+        <div className="overflow-x-auto pb-4 mb-12 -mx-4 md:-mx-8 px-4 md:px-8 scrollbar-hide" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+          <div className="flex gap-6 min-w-min">
+            {videos.map((video, index) => (
+              <a
+                key={index}
+                href={`https://www.youtube.com/watch?v=${video.id}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-shrink-0 group"
+              >
+                <div className="relative w-64 h-36 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                  <img
+                    src={video.thumbnail}
+                    alt="YouTube Thumbnail"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/50 transition-colors">
+                    <div className="w-16 h-16 flex items-center justify-center rounded-full bg-red-600 opacity-90 group-hover:opacity-100 transition-opacity">
+                      <svg className="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </div>
                   </div>
                 </div>
-                <h3 className="text-2xl font-bold text-primary mb-2">{topper.rank}</h3>
-                <p className="text-xl font-semibold text-foreground mb-1">{topper.name}</p>
-                <p className="text-lg text-muted-foreground">{topper.title}</p>
-              </CardContent>
-            </Card>
-          ))}
+              </a>
+            ))}
+          </div>
         </div>
 
         {/* Additional Success Message */}
-        <div className="bg-card rounded-2xl p-8 md:p-12 border border-border text-center">
-          <p className="text-xl md:text-2xl font-semibold text-foreground text-balance">
-            And hundreds of successful candidates across services.
-          </p>
-        </div>
+      
       </div>
     </section>
   )

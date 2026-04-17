@@ -11,10 +11,10 @@ const testimonials = [
     highlight: "271 in PSIR"
   },
   {
-    name: "Shatakshi Sinha, IPS",
-    achievement: "Fourth Attempt Success",
-    quote: "Thank you, Raja Sir and team, for your guidance and support. Your valuable knowledge and inputs w.r.t Sociology, Ethics and Essay during Mains have helped me achieve this. You played an instrumental role in my achieving a very high score of 290 in Sociology.",
-    highlight: "290 in Sociology"
+    name: "Pradeep Kumar Masilamani, IAS",
+    achievement: "Addressing Media",
+    quote: "A Chemical Engineer from S.P Peter's Engineering College, Avadi. Secured his Rank in Civil Services Exam and is now an administrative officer in Tamil Nadu. He was also very supportive with us in subject with Sociology. He did well.",
+    highlight: "Tamil Nadu IAS"
   },
   {
     name: "Thavaseelan Karunanidhi, IAS",
@@ -23,8 +23,8 @@ const testimonials = [
     highlight: "Gold Medal Winner"
   },
   {
-    name: "Uma Maheshwari, ICLS",
-    achievement: "Mother of a School going Child",
+    name: "Sharanya, IAS",
+    achievement: "Mother of a School going Child is now a Civil Servant",
     quote: "After facing so many failures, I just got it in my 6th attempt. I scored 286 in Political Science and IR and it was my life saver to secure a place in the Civil Services Exam. The main reason was Raja Sir.",
     highlight: "286 in PSIR"
   },
@@ -35,10 +35,10 @@ const testimonials = [
     highlight: "AIR 18"
   },
   {
-    name: "Rajan Navneet Singh, IAS",
-    achievement: "Computer Engineer to Civil Servant",
-    quote: "I am grateful to Raja sir and his Team for helping me with my Mains preparation. The tests and study materials of Cracking IAS Academy were of excellent quality, high standard, and well-regarded.",
-    highlight: "Career Transition"
+    name: "R. Jaghadeeswaran, IRS (IT)",
+    achievement: "Successful in his very First Attempt",
+    quote: "He is a native of Pondicherry. He is a Metallurgical engineering graduate from NIT Hampur. He joined us for his Mains coaching specifically for Mathematics, Ethics, Integrity and Aptitude and Essay in his first attempt. He got selected for the Indian Revenue Service (IRS - IT).",
+    highlight: "First Attempt Success"
   }
 ]
 

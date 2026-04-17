@@ -50,27 +50,12 @@ export function HeroSection() {
           <div className="flex-1"></div>
 
           {/* Quote and buttons at bottom */}
-          <div className="flex flex-col items-center gap-8 pb-24">
+          <div className="flex flex-col items-center gap-8">
             {/* Quote */}
-            <blockquote className="text-3xl md:text-5xl font-bold text-primary text-balance italic">
+            <blockquote className="text-3xl md:text-5xl font-bold text-primary text-balance italic mt-18">
               &ldquo;We understand UPSC better.&rdquo;
             </blockquote>
 
-            {/* CTA Buttons below quote */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                size="lg" 
-                onClick={handleExploreClick}
-                className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-10 py-7 shadow-lg shadow-primary/30"
-              >
-                <BookOpen className="mr-2 h-5 w-5" />
-                Explore Courses
-              </Button>
-              <Button size="lg" variant="outline" className="border-secondary text-secondary bg-transparent hover:bg-secondary hover:text-primary text-lg px-10 py-7">
-                <Phone className="mr-2 h-5 w-5" />
-                Contact Us
-              </Button>
-            </div>
           </div>
         </div>
       </div>
