@@ -12,7 +12,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
-import { Phone, MapPin, Globe, Clock, Send, CheckCircle } from "lucide-react"
+import { Phone, MapPin, Globe, Clock, Send, CheckCircle, MessageCircle } from "lucide-react"
 
 export function ContactSection() {
   const [isSubmitted, setIsSubmitted] = useState(false)
@@ -210,6 +210,28 @@ export function ContactSection() {
                       <h3 className="font-semibold text-foreground mb-2">Phone Numbers</h3>
                       <a href="tel:9884554654" className="text-foreground/80 text-lg block hover:text-primary transition-colors">9884 554 654</a>
                       <a href="tel:9962527528" className="text-foreground/80 text-lg block hover:text-primary transition-colors">9962 527 528</a>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-background border-border">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                      <MessageCircle className="w-6 h-6 text-green-600" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-foreground mb-2">WhatsApp</h3>
+                      <a 
+                        href="https://wa.me/919884554654?text=Hi%2C%20I'm%20interested%20in%20learning%20more%20about%20Raja%20Sir's%20IAS%20Academy."
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-green-600 font-semibold hover:text-green-700 transition-colors text-lg"
+                      >
+                        Chat with us on WhatsApp
+                      </a>
+                      <p className="text-foreground/80 text-sm mt-2">Available 24/7 for quick queries</p>
                     </div>
                   </div>
                 </CardContent>

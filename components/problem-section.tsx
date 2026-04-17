@@ -29,12 +29,11 @@ export function ProblemSection() {
 
         {/* Primary CTA */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 py-6 shadow-lg shadow-primary/30">
-            <Phone className="mr-2 h-5 w-5" />
-            Talk to a Mentor Now
-          </Button>
-          <a href="tel:9884554654" className="text-primary font-bold text-lg hover:underline">
-            📞 9884 554 654
+          <a href="tel:9884554654">
+            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 py-6 shadow-lg shadow-primary/30">
+              <Phone className="mr-2 h-5 w-5" />
+              Talk to a Mentor Now
+            </Button>
           </a>
         </div>
       </div>

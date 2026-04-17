@@ -1,5 +1,7 @@
 "use client"
 
+import Image from "next/image"
+
 export function ResultsSection() {
   const videos = [
     { id: "POYUXNa6ZAY", thumbnail: "/thumbnail1.jpg" },
@@ -45,8 +47,8 @@ export function ResultsSection() {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/50 transition-colors">
-                    <div className="w-16 h-16 flex items-center justify-center rounded-full bg-red-600 opacity-90 group-hover:opacity-100 transition-opacity">
-                      <svg className="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                    <div className="w-10 h-10 flex items-center justify-center rounded-full bg-red-600 opacity-90 group-hover:opacity-100 transition-opacity">
+                      <svg className="w-5 h-5 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M8 5v14l11-7z" />
                       </svg>
                     </div>
@@ -54,6 +56,19 @@ export function ResultsSection() {
                 </div>
               </a>
             ))}
+          </div>
+        </div>
+
+        {/* Group Photo */}
+        <div className="mt-12 flex justify-center">
+          <div className="w-full max-w-2xl rounded-xl overflow-hidden shadow-xl">
+            <Image
+              src="/group_photo.jpg"
+              alt="Raja Sir's IAS Academy Group Photo"
+              width={800}
+              height={500}
+              className="w-full h-auto object-cover"
+            />
           </div>
         </div>
 

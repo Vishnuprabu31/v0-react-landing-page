@@ -143,9 +143,6 @@ export function PricingSection() {
               <div className="pt-4 border-t border-primary/20">
                 <p className="text-2xl font-bold text-primary mb-4">{course.price}</p>
               </div>
-              <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90 mt-auto">
-                Enroll Now
-              </Button>
             </div>
           ))}
         </div>

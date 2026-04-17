@@ -22,15 +22,14 @@ export function UrgencyCTASection() {
 
         {/* CTA Button */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Button
-            size="lg"
-            className="bg-secondary text-primary hover:bg-secondary/90 text-lg px-8 py-6 shadow-lg shadow-black/20 font-semibold"
-          >
-            <Phone className="mr-2 h-5 w-5" />
-            Connect with our Academic Counsellor
-          </Button>
-          <a href="tel:9884554654" className="text-primary-foreground font-bold text-lg hover:underline">
-            📞 9884 554 654
+          <a href="tel:9884554654">
+            <Button
+              size="lg"
+              className="bg-secondary text-primary hover:bg-secondary/90 text-lg px-8 py-6 shadow-lg shadow-black/20 font-semibold"
+            >
+              <Phone className="mr-2 h-5 w-5" />
+              Connect with our Academic Counsellor
+            </Button>
           </a>
         </div>
       </div>
