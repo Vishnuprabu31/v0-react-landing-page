@@ -17,7 +17,7 @@ export function HeroSection() {
       {/* Background Image */}
       <div className="absolute inset-0 w-full h-full">
         <Image
-          src="/placeholder.jpg"
+          src="/banner.jpg"
           alt="Raja Sir's IAS Academy - Top Achievers and Faculty"
           fill
           className="object-cover"
@@ -27,38 +27,7 @@ export function HeroSection() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/60" />
         {/* Brand Color Overlay - removed for clearer image */}
       </div>
-      
-      <div className="container mx-auto px-4 relative z-10 w-full">
-        {/* Stats positioned at top left and top right - fully to edges */}
-        <div className="absolute top-8 md:top-12 left-0 -ml-2 md:-ml-4">
-          <div className="bg-white/10 backdrop-blur-md px-3 md:px-5 py-3 md:py-5 rounded-xl border border-white/20 text-center">
-            <p className="text-3xl md:text-5xl font-bold text-white mb-1">21</p>
-            <p className="text-xs md:text-sm text-secondary/90 whitespace-nowrap">Years of Excellence</p>
-          </div>
-        </div>
-
-        <div className="absolute top-8 md:top-12 right-0 -mr-2 md:-mr-4">
-          <div className="bg-white/10 backdrop-blur-md px-3 md:px-5 py-3 md:py-5 rounded-xl border border-white/20 text-center">
-            <p className="text-3xl md:text-5xl font-bold text-white mb-1">533+</p>
-            <p className="text-xs md:text-sm text-secondary/90 whitespace-nowrap">Officers Produced</p>
-          </div>
-        </div>
-
-        {/* Center content with quote and buttons at bottom */}
-        <div className="max-w-3xl mx-auto text-center flex flex-col items-center justify-between min-h-screen">
-          {/* Empty space for centering */}
-          <div className="flex-1"></div>
-
-          {/* Quote and buttons at bottom */}
-          <div className="flex flex-col items-center gap-8">
-            {/* Quote */}
-            <blockquote className="text-3xl md:text-5xl font-bold text-primary text-balance italic mt-18">
-              &ldquo;We understand UPSC better.&rdquo;
-            </blockquote>
-
-          </div>
-        </div>
-      </div>
+     
 
       {/* Bottom Gradient Fade */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
