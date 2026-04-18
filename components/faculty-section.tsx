@@ -19,7 +19,7 @@ export function FacultySection() {
         {/* Faculty Board */}
         <div className="mb-16 rounded-lg overflow-hidden shadow-2xl">
           <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/VBOARD%202-DFGqoTgkfEDHT89rJONY0Vh4xGPgea.jpg"
+            src="/placeholder.jpg"
             alt="Raja Sir's Top IAS Officers - Successful Alumni"
             width={1200}
             height={600}
@@ -37,7 +37,7 @@ export function FacultySection() {
             <div className="flex flex-col items-center">
               <div className="relative w-full aspect-square mb-4 rounded-lg overflow-hidden shadow-lg border-4 border-secondary hover:shadow-2xl transition-shadow">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/f53252d9-a049-4156-be7c-a80d3ccffd7a-qxpdGhoanMhM8XF0xD2RiiNG4jfnzp.jpeg"
+                  src="/placeholder.jpg"
                   alt="Top IAS Score Achiever"
                   fill
                   className="object-cover"
@@ -50,7 +50,7 @@ export function FacultySection() {
             <div className="flex flex-col items-center">
               <div className="relative w-full aspect-square mb-4 rounded-lg overflow-hidden shadow-lg border-4 border-secondary hover:shadow-2xl transition-shadow">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_1586-s90uvO6d5w1NNgz3JcBvxHESghezNB.jpeg"
+                  src="/placeholder.jpg"
                   alt="Top IAS Score Achiever"
                   fill
                   className="object-cover"
@@ -63,7 +63,7 @@ export function FacultySection() {
             <div className="flex flex-col items-center">
               <div className="relative w-full aspect-square mb-4 rounded-lg overflow-hidden shadow-lg border-4 border-secondary hover:shadow-2xl transition-shadow">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/0abbf3a0-aa60-4c8b-aa3d-3935d136b076-zjZnF2ee71h0iZF66ZTulflcbY396C.jpeg"
+                  src="/placeholder.jpg"
                   alt="Top IAS Score Achiever"
                   fill
                   className="object-cover"
@@ -76,7 +76,7 @@ export function FacultySection() {
             <div className="flex flex-col items-center">
               <div className="relative w-full aspect-square mb-4 rounded-lg overflow-hidden shadow-lg border-4 border-secondary hover:shadow-2xl transition-shadow">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/9cab395a-635e-4b04-8825-497847572d37-9G1cbfqDAUKdKHhAlZSRrc7551TPqG.jpeg"
+                  src="/placeholder.jpg"
                   alt="Top IAS Score Achiever"
                   fill
                   className="object-cover"
@@ -89,7 +89,7 @@ export function FacultySection() {
             <div className="flex flex-col items-center">
               <div className="relative w-full aspect-square mb-4 rounded-lg overflow-hidden shadow-lg border-4 border-secondary hover:shadow-2xl transition-shadow">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/747ccd1e-f81d-4072-b90c-99616206e5ce-d9Bq8ikYSmyl5Dz2C1QIsA38L3pvrt.jpeg"
+                  src="/placeholder.jpg"
                   alt="Top IAS Score Achiever"
                   fill
                   className="object-cover"
@@ -102,7 +102,7 @@ export function FacultySection() {
             <div className="flex flex-col items-center">
               <div className="relative w-full aspect-square mb-4 rounded-lg overflow-hidden shadow-lg border-4 border-secondary hover:shadow-2xl transition-shadow">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/911f2494-1218-45ed-ae69-d4b5c0f63dd4-LpjRpSl5M3UVQJpfwrhdX2AERB05EQ.jpeg"
+                  src="/placeholder.jpg"
                   alt="Top IAS Score Achiever"
                   fill
                   className="object-cover"
@@ -115,7 +115,7 @@ export function FacultySection() {
             <div className="flex flex-col items-center">
               <div className="relative w-full aspect-square mb-4 rounded-lg overflow-hidden shadow-lg border-4 border-secondary hover:shadow-2xl transition-shadow">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/35fdfac5-abdd-440f-9d3e-b68c2f18e441-GpPH56WzCID0efRpLp6PScD7psUx4f.jpeg"
+                  src="/placeholder.jpg"
                   alt="Top IAS Score Achiever"
                   fill
                   className="object-cover"
@@ -128,7 +128,7 @@ export function FacultySection() {
             <div className="flex flex-col items-center">
               <div className="relative w-full aspect-square mb-4 rounded-lg overflow-hidden shadow-lg border-4 border-secondary hover:shadow-2xl transition-shadow">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/113e2bcb-1169-4cad-8708-5d57154a4238-PcYLQSxtdW8xiqPozwFvBzh7jW2fPb.jpeg"
+                  src="/placeholder.jpg"
                   alt="Top IAS Score Achiever"
                   fill
                   className="object-cover"

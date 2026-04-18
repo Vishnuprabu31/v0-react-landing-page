@@ -17,7 +17,7 @@ export function HeroSection() {
       {/* Background Image */}
       <div className="absolute inset-0 w-full h-full">
         <Image
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/VBOARD%202-DFGqoTgkfEDHT89rJONY0Vh4xGPgea.jpg"
+          src="/placeholder.jpg"
           alt="Raja Sir's IAS Academy - Top Achievers and Faculty"
           fill
           className="object-cover"
