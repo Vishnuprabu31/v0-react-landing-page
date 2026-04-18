@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Menu, X, Phone } from "lucide-react"
+import Image from "next/image"
 
 const navLinks = [
   { label: "Home", href: "#" },
@@ -22,8 +23,14 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <a href="#" className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-lg">R</span>
+            <div className="w-10 h-10 flex items-center justify-center">
+              <Image
+                src="/logo.png"
+                alt="Raja Sir's IAS Academy Logo"
+                width={40}
+                height={40}
+                className="object-contain"
+              />
             </div>
             <div className="hidden sm:block">
               <p className="font-bold text-foreground leading-tight">Raja Sir&apos;s</p>
@@ -50,9 +57,6 @@ export function Navbar() {
               <Phone className="w-4 h-4" />
               9884 554 654
             </a>
-            <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
-              Enroll Now
-            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -88,9 +92,6 @@ export function Navbar() {
                   <Phone className="w-4 h-4" />
                   9884 554 654
                 </a>
-                <Button className="bg-primary text-primary-foreground hover:bg-primary/90 w-full">
-                  Enroll Now
-                </Button>
               </div>
             </div>
           </div>

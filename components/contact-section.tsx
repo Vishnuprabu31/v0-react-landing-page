@@ -12,7 +12,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
-import { Phone, MapPin, Globe, Clock, Send, CheckCircle } from "lucide-react"
+import { Phone, MapPin, Globe, Clock, Send, CheckCircle, MessageCircle } from "lucide-react"
 
 export function ContactSection() {
   const [isSubmitted, setIsSubmitted] = useState(false)
@@ -206,14 +206,22 @@ export function ContactSection() {
                     <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
                       <Phone className="w-6 h-6 text-primary" />
                     </div>
-                    <div>
-                      <h3 className="font-semibold text-foreground mb-2">Phone Numbers</h3>
-                      <a href="tel:9884554654" className="text-foreground/80 text-lg block hover:text-primary transition-colors">9884 554 654</a>
-                      <a href="tel:9962527528" className="text-foreground/80 text-lg block hover:text-primary transition-colors">9962 527 528</a>
+                    <div className="space-y-2 w-full">
+                      <h3 className="font-semibold text-foreground mb-3">Phone Numbers</h3>
+                      <a href="tel:9884554654" className="flex items-center justify-between px-4 py-2 bg-primary/10 border border-primary/30 rounded-lg text-foreground/80 hover:bg-primary/20 hover:text-primary transition-colors font-medium">
+                        <span>9884 554 654</span>
+                        <Phone className="w-4 h-4" />
+                      </a>
+                      <a href="tel:9962527528" className="flex items-center justify-between px-4 py-2 bg-primary/10 border border-primary/30 rounded-lg text-foreground/80 hover:bg-primary/20 hover:text-primary transition-colors font-medium">
+                        <span>9962 527 528</span>
+                        <Phone className="w-4 h-4" />
+                      </a>
                     </div>
                   </div>
                 </CardContent>
               </Card>
+
+             
 
               <Card className="bg-background border-border">
                 <CardContent className="p-6">
@@ -234,62 +242,6 @@ export function ContactSection() {
                   </div>
                 </CardContent>
               </Card>
-
-              <Card className="bg-background border-border">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                      <Globe className="w-6 h-6 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-foreground mb-2">Website</h3>
-                      <a 
-                        href="https://iasgoogle.com" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="text-primary hover:underline text-lg"
-                      >
-                        iasgoogle.com
-                      </a>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-background border-border">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                      <Clock className="w-6 h-6 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-foreground mb-2">Personal Touch</h3>
-                      <p className="text-foreground/80">
-                        Our faculty is available even after 9 PM for student queries. 
-                        That&apos;s the kind of personal touch every student gets at our Institute.
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              {/* Quick Call CTA */}
-              <div className="bg-primary text-primary-foreground p-6 rounded-xl">
-                <h4 className="font-semibold mb-2">Prefer to Talk?</h4>
-                <p className="text-primary-foreground/80 text-sm mb-4">
-                  Call us directly to speak with our counselors about your IAS preparation journey.
-                </p>
-                <Button 
-                  size="lg" 
-                  className="w-full bg-white text-primary hover:bg-white/90"
-                  asChild
-                >
-                  <a href="tel:9884554654">
-                    <Phone className="mr-2 h-5 w-5" />
-                    Call Now: 9884 554 654
-                  </a>
-                </Button>
-              </div>
             </div>
           </div>
         </div>
