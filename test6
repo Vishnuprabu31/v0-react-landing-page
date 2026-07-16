@@ -1,0 +1,7 @@
+lastSeen := state[repoKey]
+
+// First run
+if lastSeen == "" {
+    state[repoKey] = commits[0].SHA
+    return nil
+}
